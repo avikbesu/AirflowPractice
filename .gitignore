@@ -1,0 +1,3 @@
+# Default ignored files
+airflow-logs/
+.vscode/
