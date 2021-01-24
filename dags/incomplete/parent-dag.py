@@ -7,10 +7,10 @@ from airflow.operators import MyFirstOperator
 default_args = {
     "owner": "airflow",
     "depends_on_past": False,
-    "start_date": dates.days_ago(2),
+    "start_date": dates.days_ago(1),
 }
 
-dag = DAG('Parent_dag', default_args=default_args, schedule_interval=timedelta(days=1))
+dag = DAG('Parent_dag', default_args=default_args, schedule_interval=None)
 
 leave_work = MyFirstOperator(
 	my_operator_param='leave_work...',

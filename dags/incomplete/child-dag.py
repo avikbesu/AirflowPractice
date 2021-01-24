@@ -7,19 +7,21 @@ from airflow.utils import dates
 default_args = {
     "owner": "airflow",
     "depends_on_past": False,
-    "start_date": dates.days_ago(2),
+    "start_date": dates.days_ago(1),
 }
 
-dag = DAG('Child_dag', default_args=default_args, schedule_interval=timedelta(days=1))
+dag = DAG('Child_dag', default_args=default_args, schedule_interval=None)
 
 # Use ExternalTaskSensor to listen to the Parent_dag and cook_dinner task
 # when cook_dinner is finished, Child_dag will be triggered
 wait_for_dinner = ExternalTaskSensor(
     task_id='wait_for_dinner',
     external_dag_id='Parent_dag',
-    external_task_id='leave_work',
-    start_date=dates.days_ago(2),
+    external_task_id='cook_dinner',
+    start_date=dates.days_ago(1),
     execution_delta=timedelta(days=1),
+    mode="poke",
+    poke_interval=60,
     timeout=60,
 )
 
