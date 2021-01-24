@@ -20,10 +20,10 @@
 
  - https://kuanbutts.com/2020/05/31/airflow-dags-trigger-external-with-context/
 
- - https://stackoverflow.com/questions/45271532/in-airflow-is-there-a-good-way-to-call-another-dags-task [***Working***]
+ - https://stackoverflow.com/questions/45271532/in-airflow-is-there-a-good-way-to-call-another-dags-task **[Working]**
 
 ##### custom operator
 
- - https://michal.karzynski.pl/blog/2017/03/19/developing-workflows-with-apache-airflow/
+ - https://michal.karzynski.pl/blog/2017/03/19/developing-workflows-with-apache-airflow/ **[Working]**
 
  
