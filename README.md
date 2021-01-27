@@ -4,6 +4,8 @@
 
 `docker-compose -f docker-compose.yml up`
 
+**Note**: Currently docker compose is working for airflow 1.10.14. ref: https://towardsdatascience.com/apache-airflow-and-postgresql-with-docker-and-docker-compose-5651766dfa96
+
 ### tutorials
 
  - https://github.com/jghoman/awesome-apache-airflow
