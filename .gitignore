@@ -1,4 +1,6 @@
 # Default ignored files
-airflow-logs/
+
 .vscode/
-dags/__pycache__/
+airflow_v1/dags/__pycache__/
+airflow_v1/airflow-logs/
+airflow_v2/airflow-logs/
