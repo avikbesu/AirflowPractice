@@ -1,8 +1,8 @@
 # Airflow on docker
 
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/avikbesu/AirflowPractice)
-![GitHub issues](https://img.shields.io/github/issues-raw/avikbesu/AirflowPractice)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/avikbesu/AirflowPractice)
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/avikbesu/AirflowPractice)](#)
+[![GitHub issues](https://img.shields.io/github/issues-raw/avikbesu/AirflowPractice)](#)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/avikbesu/AirflowPractice)](#)
 
 ### How to start airflow on docker
 
