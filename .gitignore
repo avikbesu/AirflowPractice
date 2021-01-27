@@ -2,5 +2,7 @@
 
 .vscode/
 airflow_v1/dags/__pycache__/
+airflow_v1/dags/incomplete/__pycache__/
+airflow_v1/plugins/__pycache__/
 airflow_v1/airflow-logs/
 airflow_v2/airflow-logs/
