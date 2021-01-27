@@ -1,13 +1,17 @@
 # Airflow on docker
 
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/avikbesu/AirflowPractice)
+![GitHub issues](https://img.shields.io/github/issues-raw/avikbesu/AirflowPractice)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/avikbesu/AirflowPractice)
+
 ### How to start airflow on docker
 
-##### Airflow 1.10.14
+##### *Airflow 1.10.14*
 For airflow 1.10.14, go to `airflow_v1` folder and execute this command: `docker-compose -f docker-compose.yml up`.
 
 **Ref**: https://towardsdatascience.com/apache-airflow-and-postgresql-with-docker-and-docker-compose-5651766dfa96
 
-##### Airflow 2.0.0
+##### *Airflow 2.0.0*
 For airflow 2, go to `airflow_v2` folder and execute this command: `docker-compose -f docker-compose.yml up`.
 
 **Ref**: https://github.com/apache/airflow/blob/master/docs/apache-airflow/start/docker-compose.yaml
