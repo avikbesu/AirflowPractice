@@ -15,6 +15,7 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
 from airflow.utils.dates import days_ago
+from airflow.models import Variable
 
 import helper
 
@@ -74,9 +75,9 @@ with DAG(
     # [END basic_task]
 
     # [START documentation]
-    dag.doc_md = __doc__
+    t1.doc_md = __doc__
 
-    t1.doc_md = dedent(
+    dag.doc_md = dedent(
         """\
     #### Task Documentation
     You can document your task using the attributes `doc_md` (markdown),
@@ -117,6 +118,7 @@ with DAG(
     t4 = PythonOperator(
         task_id='print_the_context',
         python_callable=helper.print_context,
+        dag=dag,
     )
     # [END python_task]
 
@@ -127,7 +129,22 @@ with DAG(
         bash_command='echo "here is the message: \'$message\'"',
         env={'message': '{{ dag_run.conf["message"] if dag_run else "" }}'},
     )
+
+    t6 = PythonOperator(
+        task_id='python_task',
+        provide_context=True,
+        python_callable=helper.get_message,
+        dag=dag,
+    )
+
+    message = Variable.get('stupid')
+
+    t7 = BashOperator(
+        task_id="print_variable",
+        bash_command='echo "$message is stupid"',
+    )
+
     # [END python variable]
 
-    t1 >> [t2, t3] >> t4 >> t5
+    t1 >> [t2, t3] >> t4 >> [t5, t6, t7]
 # [END tutorial]
