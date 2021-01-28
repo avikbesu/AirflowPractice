@@ -7,22 +7,38 @@
 ### How to start airflow on docker
 
 ##### *Airflow 1.10.14*
-For airflow 1.10.14, go to `airflow_v1` folder and execute this command: `docker-compose -f docker-compose.yml up`.
+For airflow 1.10.14, go to `airflow_v1` folder and execute this command: `docker-compose -f docker-compose.yml up`
 
 **Ref**: https://towardsdatascience.com/apache-airflow-and-postgresql-with-docker-and-docker-compose-5651766dfa96
 
 ##### *Airflow 2.0.0*
-For airflow 2, go to `airflow_v2` folder and execute this command: `docker-compose -f docker-compose.yml up`.
+For airflow 2, go to `airflow_v2` folder and execute this command: `docker-compose -f docker-compose.yml up`
 
 **Ref**: https://github.com/apache/airflow/blob/master/docs/apache-airflow/start/docker-compose.yaml
 
-### tutorials
+---
+
+### What is Airflow ?
+
+Airflow is a platform to programmatically author, schedule and monitor workflows.
+
+Airflow is not a data streaming solution. Tasks do not move data from one to the other (though tasks can exchange metadata!). Airflow is not in the `Spark Streaming` or `Storm` space, it is more comparable to `Oozie` or `Azkaban`.
+
+### Basic Architecture
+
+![arch](https://airflow.apache.org/docs/apache-airflow/2.0.0/_images/arch-diag-basic.png)
+
+
+
+### LINKS
+
+#### Tutorials
 
  - https://github.com/jghoman/awesome-apache-airflow
 
- - https://airflow.apache.org/docs/apache-airflow/1.10.14/tutorial.html
+ - https://airflow.apache.org/docs/apache-airflow/stable/tutorial.html
 
-### Sample codes
+#### Sample Codes
 
 ##### job triggering sample
 
