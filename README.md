@@ -16,7 +16,7 @@ For airflow 2, go to `airflow_v2` folder and execute this command: `docker-compo
 
 **Ref**: https://github.com/apache/airflow/blob/master/docs/apache-airflow/start/docker-compose.yaml
 
-------
+---
 
 ### What is Airflow ?
 
