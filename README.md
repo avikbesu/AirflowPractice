@@ -18,34 +18,6 @@ For airflow 2, go to `airflow_v2` folder and execute this command: `docker-compo
 
 ---
 
-### What is Airflow ?
-
-Airflow is a platform to programmatically author, schedule and monitor workflows.
-
-Airflow is not a data streaming solution. Tasks do not move data from one to the other (though tasks can exchange metadata!). Airflow is not in the `Spark Streaming` or `Storm` space, it is more comparable to `Oozie` or `Azkaban`.
-
-### Basic Architecture
-
-![arch](https://airflow.apache.org/docs/apache-airflow/2.0.0/_images/arch-diag-basic.png)
-
-There are a few components to note:
-
-**Metadata Database**: Airflow uses a SQL database to store metadata about the data pipelines being run. In the diagram above, this is represented as Postgres which is extremely popular with Airflow. Alternate databases supported with Airflow include MySQL.
-
-**Web Server** and **Scheduler**: The Airflow web server and Scheduler are separate processes run (in this case) on the local machine and interact with the database mentioned above.
-
-The **Executor** is shown separately above, since it is commonly discussed within Airflow and in the documentation, but in reality it is NOT a separate process, but run within the Scheduler.
-
-The **Worker(s)** are separate processes which also interact with the other components of the Airflow architecture and the metadata repository.
-
-***airflow.cfg*** is the Airflow configuration file which is accessed by the Web Server, Scheduler, and Workers.
-
-DAGs refers to the DAG files containing Python code, representing the data pipelines to be run by Airflow. The location of these files is specified in the Airflow configuration file, but they need to be accessible by the Web Server, Scheduler, and Workers.
-
----
-
-
-
 ### LINKS
 
 #### Tutorials
