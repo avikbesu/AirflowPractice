@@ -70,4 +70,6 @@ DAGs refers to the DAG files containing Python code, representing the data pipel
 
  - https://michal.karzynski.pl/blog/2017/03/19/developing-workflows-with-apache-airflow/ **[Working]**
 
+##### xcom
+ - https://big-data-demystified.ninja/2020/04/15/airflow-xcoms-example-airflow-demystified/
  
